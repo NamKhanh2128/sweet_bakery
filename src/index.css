@@ -37,8 +37,8 @@
     --radius: 0.5rem;
 
     /* Custom colors */
-    --sidebar-start: 42 70% 50%;
-    --sidebar-end: 42 50% 70%;
+    --sidebar-start: 42 100% 37%;
+    --sidebar-end: 42 90% 45%;
     --table-header-red: 0 100% 40%;
     --table-header-green: 145 70% 45%;
     --table-header-blue: 220 90% 50%;
@@ -49,14 +49,14 @@
     --date-badge: 0 75% 65%;
     --user-card: 48 80% 88%;
 
-    --sidebar-background: 42 70% 50%;
+    --sidebar-background: 42 100% 37%;
     --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 42 60% 46%;
+    --sidebar-primary: 42 100% 37%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 42 50% 60%;
+    --sidebar-accent: 42 100% 42%;
     --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 42 50% 45%;
-    --sidebar-ring: 42 70% 50%;
+    --sidebar-border: 42 100% 30%;
+    --sidebar-ring: 42 100% 37%;
   }
 
   .dark {
