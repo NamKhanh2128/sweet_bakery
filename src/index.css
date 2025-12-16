@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 45 20% 95%;
+    --foreground: 0 0% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 15%;
+
+    --primary: 0 100% 40%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 42 60% 46%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 45 10% 90%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 145 70% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 85%;
+    --input: 0 0% 85%;
+    --ring: 0 100% 40%;
+
+    --radius: 0.5rem;
+
+    /* Custom colors */
+    --sidebar-start: 42 70% 50%;
+    --sidebar-end: 42 50% 70%;
+    --table-header-red: 0 100% 40%;
+    --table-header-green: 145 70% 45%;
+    --table-header-blue: 220 90% 50%;
+    --table-header-gray: 0 0% 70%;
+    --success-bg: 120 40% 90%;
+    --success-border: 0 100% 40%;
+    --confirm-bg: 0 70% 75%;
+    --date-badge: 0 75% 65%;
+    --user-card: 48 80% 88%;
+
+    --sidebar-background: 42 70% 50%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 42 60% 46%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 42 50% 60%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 42 50% 45%;
+    --sidebar-ring: 42 70% 50%;
+  }
+
+  .dark {
+    --background: 0 0% 10%;
+    --foreground: 0 0% 95%;
+    --card: 0 0% 15%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 15%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 0 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 42 60% 46%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 145 70% 45%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 25%;
+    --input: 0 0% 25%;
+    --ring: 0 100% 50%;
+    --sidebar-background: 42 70% 25%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 42 60% 40%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 42 50% 35%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 42 50% 30%;
+    --sidebar-ring: 42 70% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer components {
+  .sidebar-gradient {
+    background: linear-gradient(180deg, hsl(42 70% 50%) 0%, hsl(42 50% 70%) 100%);
+  }
+
+  .table-header-red {
+    @apply bg-primary text-primary-foreground;
+  }
+
+  .table-header-green {
+    background-color: hsl(145 70% 45%);
+    @apply text-white;
+  }
+
+  .table-header-blue {
+    background-color: hsl(220 90% 50%);
+    @apply text-white;
+  }
+
+  .table-header-gray {
+    background-color: hsl(0 0% 70%);
+    @apply text-foreground;
+  }
+
+  .btn-save {
+    background-color: hsl(145 70% 45%);
+    @apply text-white px-8 py-3 rounded-full font-semibold text-lg;
+  }
+
+  .btn-cancel {
+    @apply bg-destructive text-destructive-foreground px-8 py-3 rounded-full font-semibold text-lg;
+  }
+
+  .btn-add-new {
+    background: linear-gradient(135deg, hsl(42 70% 50%) 0%, hsl(42 60% 55%) 100%);
+    @apply text-white px-6 py-2 rounded-full font-semibold flex items-center gap-2;
+  }
+
+  .date-badge {
+    background-color: hsl(0 75% 65%);
+    @apply text-white px-4 py-1 rounded-full font-semibold;
+  }
+
+  .success-message {
+    background-color: hsl(120 40% 90%);
+    border: 2px solid hsl(0 100% 40%);
+    @apply p-8 text-center;
+  }
+
+  .confirm-dialog {
+    background-color: hsl(0 70% 75%);
+    @apply p-8 text-center;
+  }
+
+  .upload-zone {
+    @apply border-2 border-dashed border-muted-foreground/50 rounded-xl bg-muted/30 flex flex-col items-center justify-center;
+  }
+
+  .info-table {
+    @apply w-full border border-border;
+  }
+
+  .info-table th,
+  .info-table td {
+    @apply border border-border px-4 py-2 text-left;
+  }
+}
